@@ -1,7 +1,7 @@
 ================================================================================
           TEAMSYNC - ENHANCED TECHNICAL DOCUMENTATION
 ================================================================================
-Author: Antigravity AI (Senior Full-Stack Engineering Module)
+Author: Aryan Sharma
 Date: May 5, 2026
 Project Name: TeamSync
 Tagline: One team. One flow.

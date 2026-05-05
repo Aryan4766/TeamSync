@@ -38,7 +38,7 @@ TeamSync is not just another todo list. It is a **secure, role-aware productivit
 ---
 
 ## 📁 Elite Documentation
-For a deep dive into the engineering decisions, system design diagrams, and interview preparation, refer to our master technical file:
+For a deep dive into the engineering decisions, system design diagrams, and interview preparation, refer to my master technical file:
 👉 **[TECHNICAL_DOCUMENTATION.txt](./TECHNICAL_DOCUMENTATION.txt)**
 
 ---
