@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Secrets
+.env
+.env.local
+.env.*.local
+
+# Documentation to exclude (as requested)
+DEMO_GUIDE.md
+
+# OS files
+.DS_Store
+Thumbs.db
