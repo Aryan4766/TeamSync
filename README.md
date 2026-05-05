@@ -119,5 +119,4 @@ Run both servers simultaneously for the full experience:
 Built with ❤️ by Aryan Sharma.
 Distributed under the **MIT License**.
 
----
-**BOOM! YOUR PROJECT IS READY TO SCALE.** 🚀🔥
+----
