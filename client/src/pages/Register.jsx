@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { CheckSquare, Eye, EyeOff, Mail, Lock, User, Shield } from 'lucide-react';
+import { CheckSquare, Eye, EyeOff, Mail, Lock, User } from 'lucide-react';
 import toast from 'react-hot-toast';
 
 const Register = () => {
   const navigate = useNavigate();
   const { register, loading } = useAuth();
-  const [form, setForm] = useState({ name: '', email: '', password: '', role: 'Member' });
+  const [form, setForm] = useState({ name: '', email: '', password: '' });
   const [showPw, setShowPw] = useState(false);
 
   const handleSubmit = async (e) => {
@@ -16,7 +16,7 @@ const Register = () => {
       toast.error('Password must be at least 6 characters');
       return;
     }
-    const result = await register(form.name, form.email, form.password, form.role);
+    const result = await register(form.name, form.email, form.password);
     if (result.success) {
       toast.success('Account created!');
       navigate('/dashboard');
@@ -94,26 +94,7 @@ const Register = () => {
               </div>
             </div>
 
-            <div>
-              <label className="label">Role</label>
-              <div className="grid grid-cols-2 gap-3">
-                {['Member', 'Admin'].map(role => (
-                  <button
-                    key={role}
-                    type="button"
-                    onClick={() => setForm(f => ({ ...f, role }))}
-                    className={`flex items-center gap-2 px-4 py-2.5 rounded-lg border text-sm font-medium transition-all ${
-                      form.role === role
-                        ? 'bg-primary-600/20 border-primary-500/50 text-primary-300'
-                        : 'bg-surface-800 border-slate-700/50 text-slate-400 hover:border-slate-600'
-                    }`}
-                  >
-                    <Shield size={14} />
-                    {role}
-                  </button>
-                ))}
-              </div>
-            </div>
+
 
             <button type="submit" disabled={loading} className="btn-primary w-full justify-center py-2.5 mt-2">
               {loading ? (

@@ -55,10 +55,10 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  const register = async (name, email, password, role) => {
+  const register = async (name, email, password) => {
     dispatch({ type: 'SET_LOADING', payload: true });
     try {
-      const { data } = await api.post('/auth/register', { name, email, password, role });
+      const { data } = await api.post('/auth/register', { name, email, password });
       dispatch({ type: 'LOGIN_SUCCESS', payload: data.data });
       return { success: true };
     } catch (error) {
